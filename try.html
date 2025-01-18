@@ -1,0 +1,1505 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Oraimo | Clone</title>
+    <link rel="shortcut icon" href="./favicon.ico.png" type="image/x-icon">
+    <!-- Remix Icon CDN  -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/remixicon/4.4.0/remixicon.min.css"
+        integrity="sha512-6sfYTBLNjOZhwJ5g/J0529qHqIdXxO1BycUHd1LIJjEzVCzX8cHtoXDgd+ylrqCl/OZM/RMDgkn2Dd41lJsJjw=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+    <!-- Google font  -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Noto+Sans:ital,wght@0,100..900;1,100..900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
+        rel="stylesheet">
+</head>
+<style>
+    * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+        font-family: "Noto Sans", sans-serif;
+    }
+
+    marquee {
+        background: #333;
+        padding: 15px;
+    }
+
+    marquee p {
+        color: #fff;
+        font-size: 1.3rem;
+        font-family: Arial, Helvetica, sans-serif;
+    }
+
+    header {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        background-color: #2a2a2a;
+        margin-top: -5px;
+        padding: 0 40px;
+    }
+
+    header .sub-header {
+        display: flex;
+        gap: 40px;
+        align-items: center;
+    }
+
+    header nav .nav-links {
+        list-style: none;
+        display: flex;
+        gap: 20px;
+
+    }
+
+    header nav .nav-links .nav-link {
+        display: flex;
+        align-items: center;
+        height: 60px;
+        cursor: pointer;
+        color: #fff;
+    }
+
+    header nav .nav-links .nav-link:hover .link {
+        color: #82e600;
+    }
+
+    header nav .nav-links li:hover i {
+        transform: rotate(180deg);
+    }
+
+    header nav .nav-links li .link {
+        color: #fff;
+        text-decoration: none;
+        font-weight: 600;
+    }
+
+    header .icons i {
+        margin: 0 20px;
+        color: #fff;
+        transform: rotateY(90deg);
+
+    }
+
+    header .hot_new {
+        width: 160px;
+        height: 90px;
+        background-color: #eee;
+        position: absolute;
+        top: 115px;
+        display: none;
+    }
+
+    header .hot_new ul {
+        list-style: none;
+    }
+
+    header .hot_new ul li {
+        padding: 10px 15px;
+    }
+
+    header nav .nav-links .hot:hover .hot_new {
+        display: block;
+    }
+
+    header .hot_new .nav-dropdown li:hover a {
+        color: #82e600 !important;
+    }
+
+    header .hot_new ul a {
+        color: #000 !important;
+        text-decoration: none;
+    }
+
+    header .support-dropdown {
+        background-color: #fff;
+        position: absolute;
+        top: 115px;
+        padding: 10px;
+        display: none;
+    }
+
+    header .support-dropdown ul {
+        list-style: none;
+    }
+
+    header .support-dropdown a {
+        text-decoration: none;
+        color: #000;
+        font-weight: 500;
+        display: flex;
+        flex-direction: column;
+        padding: 10px 0;
+    }
+
+    header .support-dropdown a:hover {
+        color: #82e600;
+    }
+
+    header .sup:hover .support-dropdown {
+        display: block;
+    }
+
+    #sub-heroe {
+        display: flex;
+        padding: 50px;
+        justify-content: space-around;
+        align-items: center;
+    }
+
+    #sub-heroe div {
+        display: flex;
+        align-items: center;
+    }
+
+    #products {
+        padding: 50px;
+    }
+
+    #products div {
+        position: relative;
+    }
+
+    #products img {
+        width: 100%;
+        border-radius: 10px;
+    }
+
+    #products p {
+        position: absolute;
+        top: 20px;
+        color: #fff;
+        font-weight: 700;
+        margin-left: 10px;
+    }
+
+    #products .grid {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 20px;
+        margin-top: 20px;
+    }
+
+    #best-seller {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        margin: 0, auto;
+        padding: 0 30px;
+    }
+
+    #best-seller h4 {
+        text-align: center;
+        margin-bottom: 20px;
+    }
+
+    #best-seller .product-group {
+        /* width: 94%; */
+        overflow: hidden;
+        display: flex;
+        gap: 15px;
+        position: relative;
+    }
+
+    .product-card {
+        width: 250px;
+        border-radius: 8px;
+    }
+
+    .product-card .product-top {
+        display: flex;
+        justify-content: center;
+        flex-direction: column;
+        background-color: #f3f0f0;
+        width: 100%;
+    }
+
+    .product-card .product-top .rating {
+        background-color: #d9d6d6;
+        width: 45%;
+        height: 35px;
+        padding: 5px 10px;
+        border-radius: 50px;
+        margin-top: -30px;
+    }
+
+    .product-card .product-top img {
+        width: 250px;
+        margin-left: 25px;
+    }
+
+    .product-body {
+        padding: 10px;
+    }
+
+    .product-body h4 {
+        text-wrap: nowrap;
+        overflow: hidden;
+    }
+
+    .product-body h4,
+    .product-body li {
+        border-bottom: 1px solid #ccc;
+        padding-bottom: 8px;
+    }
+
+    .product-body ul {
+        margin: 10px 5px;
+        list-style: none;
+    }
+
+    .product-body ul img {
+        width: 15px;
+    }
+
+    .product-body span {
+        font-size: 0.8rem;
+    }
+
+    .product-body .price {
+        display: flex;
+        gap: 20px;
+        cursor: pointer;
+        margin-bottom: 10px;
+    }
+
+    .product-body .price h3,
+    .product-body .price h5 {
+        display: flex;
+        align-items: center;
+    }
+
+    .product-body .cart {
+        display: flex;
+        gap: 15px;
+        justify-content: center;
+    }
+
+    .product-body .cart .learn {
+        background-color: #fff;
+        border: 1px solid #000;
+        color: #000;
+
+    }
+
+    .product-body .cart .add-cart {
+        background-color: #000;
+        border: 1px solid #000;
+        color: #fff;
+
+    }
+
+    .product-body .cart button {
+        padding: 10px;
+        border-radius: 50px;
+        border: none;
+    }
+
+    #best-seller .scroll-btn {
+        display: flex;
+        justify-content: space-between;
+        position: absolute;
+        width: 92%;
+        margin-top: 45px;
+    }
+
+    #best-seller .scroll-btn div {
+        width: 30px;
+        height: 30px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        font-size: 1.5rem;
+        background-color: #e8dcdc;
+        color: #fff;
+        opacity: 90%;
+        border-radius: 50px;
+        cursor: pointer;
+    }
+
+    #best-seller .scroll-track {
+        margin-top: 15px;
+        display: flex;
+        justify-content: center;
+        gap: 10px;
+    }
+
+    #best-seller .scroll-track div {
+        width: 8px;
+        height: 8px;
+        background-color: #e8dcdc;
+        border-radius: 50px;
+    }
+</style>
+
+<body>
+    <marquee>
+        <p>Register ans subscribe now to Enjoy 600 points. Enjoy exclusive discounts, points more </p>
+    </marquee>
+    <header>
+        <div class="sub-header">
+            <img src="logo.png" alt="">
+            <nav>
+                <ul class="nav-links">
+                    <li class="nav-link"><a class="link" href="">Daily Deals 🔥</a></li>
+                    <li class="hot nav-link">
+                        <a class="link" href="">Hot & New </a>
+                        <i class="ri-arrow-down-s-line"></i>
+
+
+                        <div class="hot_new">
+                            <ul class="nav-dropdown">
+                                <li><a href="">Best Seller</a></li>
+                                <li><a href="">New Arrival</a></li>
+                            </ul>
+                        </div>
+
+                    </li>
+                    <li class="nav-link"><a href="" class="link">Product </a><i class="ri-arrow-down-s-line"></i></li>
+                    <li class="nav-link sup">
+                        <a class="link" href="">Support </a>
+                        <i class="ri-arrow-down-s-line"></i>
+
+                        <div class="support-dropdown">
+                            <ul>
+                                <li>
+                                    <a href="">
+                                        Track order
+                                        <img src="./Icons/s1.webp" width="100" alt="">
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="">
+                                        Visit carlcare
+                                        <img src="./Icons/s2.webp" width="100" alt="">
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="">
+                                        Product authentication
+                                        <img src="./Icons/scanhere.webp" width="150" alt="">
+                                    </a>
+                                </li>
+                            </ul>
+                        </div>
+                    </li>
+                </ul>
+            </nav>
+
+        </div>
+
+        <div class="icons">
+            <i class="ri-smartphone-line"></i>
+            <i class="ri-search-line"></i>
+            <i class="ri-shopping-cart-line"></i>
+            <i class="ri-user-line" style="margin-right: 0;"></i>
+        </div>
+
+
+
+    </header>
+    <section id="Heroe">
+        <img src="Image/Oraimo2.webp" style="width: 100%;" alt="">
+
+        </div>
+    </section>
+    <section id="sub-heroe">
+        <div>
+            <img src="./Image/lorry" alt="">
+            <p>Free Shipping over ₦20,000 in Lagos</p>
+        </div>
+        <div>
+            <img src="./Image/cash" alt="">
+            <p>Cash on Delivery</p>
+        </div>
+        <div>
+            <img src="./Image/settings" alt="">
+            <p> Hassle-Free Warranty</p>
+        </div>
+    </section>
+
+    <section id="products">
+        <div>
+            <img src="./Image/AudioImg">
+            <p>Audio</p>
+        </div>
+        <div class="grid">
+            <div>
+                <img src="./Image/powerImg" alt="">
+                <p>Power</p>
+            </div>
+            <div>
+                <img src="./Image/smartImg" alt="">
+                <p>Smart & Office</p>
+            </div>
+            <div>
+                <img src="./Image/personalImg" alt="">
+                <p>Personal care</p>
+            </div>
+            <div>
+                <img src="./Image/personalImg" alt="">
+                <p>Home Appliances</p>
+            </div>
+        </div>
+    </section>
+
+    <section id="best-seller">
+        <h4>Best seller</h4>
+        <div class="product-group">
+            <div class="product-card">
+                <div class="product-top">
+                    <img src="Image/airpod" alt="">
+
+                    <div class="rating">
+                        <h4>
+                            4.8 <i style="color: #82e600;" class="ri-star-fill"></i>
+                            <span style="color: #4b4a4a;">(846)</span>
+                        </h4>
+                    </div>
+                </div>
+
+                <div class="product-body">
+                    <h4>FreePods Neo Half In Ear True Wireless Earbuds</h4>
+                    <ul>
+                        <li>
+                            <img src="Icons/50-hr-long-playtime.svg" alt="">
+                            <span>50-hrs Long Playtime</span>
+                        </li>
+                        <li>
+                            <img src="Icons/sound360-spatial-audio.svg" alt="">
+                            <span>Sound360 Spatial Audio</span>
+                        </li>
+                    </ul>
+
+                    <div class="price">
+                        <h3>
+                            <img src="Icons/icons8-naira-24.png" alt="">
+                            21, 900
+
+                        </h3>
+                        <h5>
+                            <img style="width: 15px;" src="Icons/icons8-naira-24.png" alt="">
+                            <s style="color: #4b4a4a;">24,800</s>
+                        </h5>
+                    </div>
+                    <div class="cart">
+                        <button class="learn">
+                            Learn more
+                        </button>
+                        <button class="add-cart">
+                            Add to cart
+                        </button>
+                    </div>
+                </div>
+            </div>
+
+
+            <div class="product-card">
+                <div class="product-top">
+                    <img src="Image/OSW-802N.webp" alt="">
+                    <div class="rating">
+                        <h4>
+                            3.7 <i style="color: #82e600;" class="ri-star-fill"></i>
+                            <span style="color: #4b4a4a;">(846)</span>
+                        </h4>
+                    </div>
+                </div>
+
+                <div class="product-body">
+                    <h4>oraimo Watch Nova V 2.01" HD Video Watch Faces Smart Watchs</h4>
+                    <ul>
+                        <li>
+                            <img src="Image/bluetooth-call.svg" alt="">
+                            <span>Wireless HD Calling</span>
+                        </li>
+                        <li>
+                            <img src="Image/video_fill.svg" alt="">
+                            <span> Video Watch Faces</span>
+                        </li>
+                        <li>
+                            <img src="Image/tempered-glass.svg" alt="">
+                            <span> Tempered Glass</span>
+                        </li>
+                        <li>
+                            <img src="Image/camera-remote-preview-sync.svg" alt="">
+                            <span> Camera Remote, Preview Sync</span>
+                        </li>
+                    </ul>
+
+                    <div class="price">
+                        <h3>
+                            <img src="Icons/icons8-naira-24.png" alt="">
+                            57,900
+
+                        </h3>
+                    </div>
+                    <div class="cart">
+                        <button class="learn">
+                            Learn more
+                        </button>
+                        <button class="add-cart">
+                            Add to cart
+                        </button>
+                    </div>
+                </div>
+            </div>
+
+            <div class="product-card">
+                <div class="product-top">
+                    <img src="Image/OTW-630.webp" alt="">
+                    <div class="rating">
+                        <h4>
+                            4.8 <i style="color: #82e600;" class="ri-star-fill"></i>
+                            <span style="color: #4b4a4a;">(846)</span>
+                        </h4>
+                    </div>
+                </div>
+
+                <div class="product-body">
+                    <h4>oraimo SpaceBuds Hybrid ANC True Wireless Earbuds Customized Voice Prompt
+                    </h4>
+                    <ul>
+                        <li>
+                            <img src="Image/pro-hybrid-noise-cancellation-technology.svg" alt="">
+                            <span> 50dB Hybrid ANC Noise Cancellation</span>
+                        </li>
+                        <li>
+                            <img src="Image/personalized-lighting-effect.svg" alt="">
+                            <span>Personalized Lighting Effect</span>
+                        </li>
+                        <li>
+                            <img src="Image/customize-your-voice-prompt.svg" alt="">
+                            <span> Customized Voice Prompts</span>
+                        </li>
+                        <li>
+                            <img src="Image/playtime.svg" alt="">
+                            <span> 40-Hr Long Playtime</span>
+                        </li>
+                    </ul>
+
+                    <div class="price">
+                        <h3>
+                            <img src="Icons/icons8-naira-24.png" alt="">
+                            45,900
+
+                        </h3>
+                        <h5>
+                            <img style="width: 15px;" src="Icons/icons8-naira-24.png" alt="">
+                            <s style="color: #4b4a4a;">57,200</s>
+                        </h5>
+                    </div>
+                    <div class="cart">
+                        <button class="learn">
+                            Learn more
+                        </button>
+                        <button class="add-cart">
+                            Add to cart
+                        </button>
+                    </div>
+                </div>
+            </div>
+
+            <div class="product-card">
+                <div class="product-top">
+                    <img src="Image/OPB-1301-680-1.webp" alt="">
+                    <div class="rating">
+                        <h4>
+                            4.8 <i style="color: #82e600;" class="ri-star-fill"></i>
+                            <span style="color: #4b4a4a;">(846)</span>
+                        </h4>
+                    </div>
+                </div>
+
+                <div class="product-body">
+                    <h4>oraimo PowerBox 300 Lit 30000mAh 15W Power Bank</h4>
+                    <ul>
+                        <li>
+                            <img src="Image/15w-type-c-in-out.svg" alt="">
+                            <span>15W Type-C IN & OUT</span>
+                        </li>
+                        <li>
+                            <img src="Image/led-torch.svg" alt="">
+                            <span>LED Touch</span>
+                        </li>
+                        <li>
+                            <img src="Image/5a-fast-charging.svg" alt="">
+                            <span>3A Fast Charging </span>
+                        </li>
+                        <li>
+                            <img src="Image/safety-protection.svg" alt="">
+                            <span> Multi-Protection Safety System</span>
+                        </li>
+                    </ul>
+
+                    <div class="price">
+                        <h3>
+                            <img src="Icons/icons8-naira-24.png" alt="">
+                            30,900
+
+                        </h3>
+                        <h5>
+                            <img style="width: 15px;" src="Icons/icons8-naira-24.png" alt="">
+                            <s style="color: #4b4a4a;">43,300</s>
+                        </h5>
+                    </div>
+                    <div class="cart">
+                        <button class="learn">
+                            Learn more
+                        </button>
+                        <button class="add-cart">
+                            Add to cart
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="scroll-btn">
+            <div class="prev"><i class="ri-arrow-left-s-line"></i></div>
+            <div class="next"><i class="ri-arrow-right-s-line"></i></div>
+        </div>
+        <div class="scroll-track">
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+        </div>
+    </section>
+    <section style="margin-top: 30px;">
+        <img src="Image/new-arrival-l.webp" style="width: 100%; height: 50vh;" alt="">
+    </section>
+
+    <section id="new-arrival" style="padding: 30px;">
+        <h4 style="margin-bottom: 20px; text-align: center;">New Arrival</h4>
+
+
+        <div class="all-production" style="display: grid; grid-template-columns: repeat(4, 1fr);">
+            <div class="product-card">
+                <div class="product-top">
+                    <img src="Image/airpod" alt="">
+                    <div class="rating">
+                        <h4>
+                            4.8 <i style="color: #82e600;" class="ri-star-fill"></i>
+                            <span style="color: #4b4a4a;">(846)</span>
+                        </h4>
+                    </div>
+                </div>
+
+                <div class="product-body">
+                    <h4>FreePods Neo Half In Ear True Wireless Earbuds</h4>
+                    <ul>
+                        <li>
+                            <img src="Icons/50-hr-long-playtime.svg" alt="">
+                            <span>50-hrs Long Playtime</span>
+                        </li>
+                        <li>
+                            <img src="Icons/sound360-spatial-audio.svg" alt="">
+                            <span>Sound360 Spatial Audio</span>
+                        </li>
+                    </ul>
+
+                    <div class="price">
+                        <h3>
+                            <img src="Icons/icons8-naira-24.png" alt="">
+                            21, 900
+
+                        </h3>
+                        <h5>
+                            <img style="width: 15px;" src="Icons/icons8-naira-24.png" alt="">
+                            <s style="color: #4b4a4a;">24,800</s>
+                        </h5>
+                    </div>
+                    <div class="cart">
+                        <button class="learn">
+                            Learn more
+                        </button>
+                        <button class="add-cart">
+                            Add to cart
+                        </button>
+                    </div>
+                </div>
+            </div>
+
+
+            <div class="product-card">
+                <div class="product-top">
+                    <img src="Image/OSM-501A-311green.webp" alt="">
+                    <div class="rating">
+                        <h4>
+                            5.0 <i style="color: #82e600;" class="ri-star-fill"></i>
+                            <span style="color: #4b4a4a;">(8460)</span>
+                        </h4>
+                    </div>
+                </div>
+
+                <div class="product-body">
+                    <h4>oraimo SmartSandwichMaker Plus 1200W with Detachable Cooking Plates</h4>
+                    <ul>
+                        <li>
+                            <img src="Image/4-lice-sandwich-maker.svg" alt="">
+                            <span> 8-Slice Sandwich Maker</span>
+                        </li>
+                        <li>
+                            <img src="Image/detachable-cooking-plates.svg" alt="">
+                            <span> Detachable Cooking Plates</span>
+                        </li>
+                        <li>
+                            <img src="Image/non-stick-coating.svg" alt="">
+                            <span> Non-stick Coating</span>
+                        </li>
+                        <li>
+                            <img src="Image/stainless-steel-housing-cropped.svg" alt="">
+                            <span> Stainless Steel Housing</span>
+                        </li>
+                    </ul>
+
+                    <div class="price">
+                        <h3>
+                            <img src="Icons/icons8-naira-24.png" alt="">
+                            94,900
+
+                        </h3>
+                        <h5>
+                            <img style="width: 15px;" src="Icons/icons8-naira-24.png" alt="">
+                            <s style="color: #4b4a4a;">111,500</s>
+                        </h5>
+                    </div>
+                    <div class="cart">
+                        <button class="learn">
+                            Learn more
+                        </button>
+                        <button class="add-cart">
+                            Add to cart
+                        </button>
+                    </div>
+                </div>
+            </div>
+
+            <div class="product-card">
+                <div class="product-top">
+                    <img src="Image/OHP-201A.webp" alt="">
+                    <div class="rating">
+                        <h4>
+                            3.8 <i style="color: #82e600;" class="ri-star-fill"></i>
+                            <span style="color: #4b4a4a;">(8546)</span>
+                        </h4>
+                    </div>
+                </div>
+
+                <div class="product-body">
+                    <h4>oraimo SmartCooker 1000W 3L Electric Cooker</h4>
+                    <ul>
+                        <li>
+                            <img src="Image/non-stick-coating.svg" alt="">
+                            <span>Non-Stick Coating </span>
+                        </li>
+                        <li>
+                            <img src="Image/see-through-glass-lid.svg" alt="">
+                            <span>See-Through Glass Lid</span>
+                        </li>
+                        <li>
+                            <img src="Image/dual-layer-insulation-anti-scald-design.svg" alt="">
+                            <span>Dual-Layer Insulation & Anti-Scald Design</span>
+                        </li>
+                        <li>
+                            <img src="Image/easy-to-clean.svg" alt="">
+                            <span>One-Knob Easy Control</span>
+                        </li>
+                    </ul>
+
+                    <div class="price">
+                        <h3>
+                            <img src="Icons/icons8-naira-24.png" alt="">
+                            49,900
+
+                        </h3>
+                        <h5>
+                            <img style="width: 15px;" src="Icons/icons8-naira-24.png" alt="">
+                            <s style="color: #4b4a4a;">59,000</s>
+                        </h5>
+                    </div>
+                    <div class="cart">
+                        <button class="learn">
+                            Learn more
+                        </button>
+                        <button class="add-cart">
+                            Add to cart
+                        </button>
+                    </div>
+                </div>
+            </div>
+
+            <div class="product-card">
+                <div class="product-top">
+                    <img src="Image/OMB-201A-1.webp" alt="">
+                    <div class="rating">
+                        <h4>
+                            4.2 <i style="color: #82e600;" class="ri-star-fill"></i>
+                            <span style="color: #4b4a4a;">(6646)</span>
+                        </h4>
+                    </div>
+                </div>
+
+                <div class="product-body">
+                    <h4>oraimo SmartBlender Cup 1L Juice Blender</h4>
+                    <ul>
+                        <li>
+                            <img src="Image/dual-lid-convenience.svg" alt="">
+                            <span>Dual Lid Convenience</span>
+                        </li>
+                        <li>
+                            <img src="Image/max-20-cups-on-full-charge.svg" alt="">
+                            <span>Max 15 Cups on Full Charge</span>
+                        </li>
+                        <li>
+                            <img src="Image/grab-and-go.svg" alt="">
+                            <span>Grab and Go</span>
+                        </li>
+                        <li>
+                            <img src="Image/1.7l-big-capacity.svg" alt="">
+                            <span>1L Big Capacity</span>
+                        </li>
+
+                    </ul>
+
+                    <div class="price">
+                        <h3>
+                            <img src="Icons/icons8-naira-24.png" alt="">
+                            52,900
+
+                        </h3>
+                        <h5>
+                            <img style="width: 15px;" src="Icons/icons8-naira-24.png" alt="">
+                            <s style="color: #4b4a4a;">64,000</s>
+                        </h5>
+                    </div>
+                    <div class="cart">
+                        <button class="learn">
+                            Learn more
+                        </button>
+                        <button class="add-cart">
+                            Add to cart
+                        </button>
+                    </div>
+                </div>
+            </div>
+
+
+            <div class="product-card">
+                <div class="product-top">
+                    <img src="Image/airpod" alt="">
+                    <div class="rating">
+                        <h4>
+                            4.8 <i style="color: #82e600;" class="ri-star-fill"></i>
+                            <span style="color: #4b4a4a;">(846)</span>
+                        </h4>
+                    </div>
+                </div>
+
+                <div class="product-body">
+                    <h4>FreePods Neo Half In Ear True Wireless Earbuds</h4>
+                    <ul>
+                        <li>
+                            <img src="Icons/50-hr-long-playtime.svg" alt="">
+                            <span>50-hrs Long Playtime</span>
+                        </li>
+                        <li>
+                            <img src="Icons/sound360-spatial-audio.svg" alt="">
+                            <span>Sound360 Spatial Audio</span>
+                        </li>
+                    </ul>
+
+                    <div class="price">
+                        <h3>
+                            <img src="Icons/icons8-naira-24.png" alt="">
+                            21, 900
+
+                        </h3>
+                        <h5>
+                            <img style="width: 15px;" src="Icons/icons8-naira-24.png" alt="">
+                            <s style="color: #4b4a4a;">24,800</s>
+                        </h5>
+                    </div>
+                    <div class="cart">
+                        <button class="learn">
+                            Learn more
+                        </button>
+                        <button class="add-cart">
+                            Add to cart
+                        </button>
+                    </div>
+                </div>
+            </div>
+
+
+            <div class="product-card">
+                <div class="product-top">
+                    <img src="Image/airpod" alt="">
+                    <div class="rating">
+                        <h4>
+                            4.8 <i style="color: #82e600;" class="ri-star-fill"></i>
+                            <span style="color: #4b4a4a;">(846)</span>
+                        </h4>
+                    </div>
+                </div>
+
+                <div class="product-body">
+                    <h4>FreePods Neo Half In Ear True Wireless Earbuds</h4>
+                    <ul>
+                        <li>
+                            <img src="Icons/50-hr-long-playtime.svg" alt="">
+                            <span>50-hrs Long Playtime</span>
+                        </li>
+                        <li>
+                            <img src="Icons/sound360-spatial-audio.svg" alt="">
+                            <span>Sound360 Spatial Audio</span>
+                        </li>
+                    </ul>
+
+                    <div class="price">
+                        <h3>
+                            <img src="Icons/icons8-naira-24.png" alt="">
+                            21, 900
+
+                        </h3>
+                        <h5>
+                            <img style="width: 15px;" src="Icons/icons8-naira-24.png" alt="">
+                            <s style="color: #4b4a4a;">24,800</s>
+                        </h5>
+                    </div>
+                    <div class="cart">
+                        <button class="learn">
+                            Learn more
+                        </button>
+                        <button class="add-cart">
+                            Add to cart
+                        </button>
+                    </div>
+                </div>
+            </div>
+
+            <div class="product-card">
+                <div class="product-top">
+                    <img src="Image/airpod" alt="">
+                    <div class="rating">
+                        <h4>
+                            4.8 <i style="color: #82e600;" class="ri-star-fill"></i>
+                            <span style="color: #4b4a4a;">(846)</span>
+                        </h4>
+                    </div>
+                </div>
+
+                <div class="product-body">
+                    <h4>FreePods Neo Half In Ear True Wireless Earbuds</h4>
+                    <ul>
+                        <li>
+                            <img src="Icons/50-hr-long-playtime.svg" alt="">
+                            <span>50-hrs Long Playtime</span>
+                        </li>
+                        <li>
+                            <img src="Icons/sound360-spatial-audio.svg" alt="">
+                            <span>Sound360 Spatial Audio</span>
+                        </li>
+                    </ul>
+
+                    <div class="price">
+                        <h3>
+                            <img src="Icons/icons8-naira-24.png" alt="">
+                            21, 900
+
+                        </h3>
+                        <h5>
+                            <img style="width: 15px;" src="Icons/icons8-naira-24.png" alt="">
+                            <s style="color: #4b4a4a;">24,800</s>
+                        </h5>
+                    </div>
+                    <div class="cart">
+                        <button class="learn">
+                            Learn more
+                        </button>
+                        <button class="add-cart">
+                            Add to cart
+                        </button>
+                    </div>
+                </div>
+            </div>
+
+            <div class="product-card">
+                <div class="product-top">
+                    <img src="Image/airpod" alt="">
+                    <div class="rating">
+                        <h4>
+                            4.8 <i style="color: #82e600;" class="ri-star-fill"></i>
+                            <span style="color: #4b4a4a;">(846)</span>
+                        </h4>
+                    </div>
+                </div>
+
+                <div class="product-body">
+                    <h4>FreePods Neo Half In Ear True Wireless Earbuds</h4>
+                    <ul>
+                        <li>
+                            <img src="Icons/50-hr-long-playtime.svg" alt="">
+                            <span>50-hrs Long Playtime</span>
+                        </li>
+                        <li>
+                            <img src="Icons/sound360-spatial-audio.svg" alt="">
+                            <span>Sound360 Spatial Audio</span>
+                        </li>
+                    </ul>
+
+                    <div class="price">
+                        <h3>
+                            <img src="Icons/icons8-naira-24.png" alt="">
+                            21, 900
+
+                        </h3>
+                        <h5>
+                            <img style="width: 15px;" src="Icons/icons8-naira-24.png" alt="">
+                            <s style="color: #4b4a4a;">24,800</s>
+                        </h5>
+                    </div>
+                    <div class="cart">
+                        <button class="learn">
+                            Learn more
+                        </button>
+                        <button class="add-cart">
+                            Add to cart
+                        </button>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </section>
+
+    <sectio style="padding: 50px  0;">
+        <img style="width: 100%;" src="Image/trustedIgn.webp" alt="">
+        </section>
+
+        <style>
+            #why-buy {
+                margin: 20px 0;
+                background-color: #eeecec;
+            }
+
+            #why-buy .container {
+                height: 100vh;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                background-color: #a5f470;
+                overflow: hidden;
+            }
+
+            #why-buy .round-1,
+            #why-buy .round-2 {
+                width: 900px;
+                height: 900px;
+                background: radial-gradient(circle, transparent 50%, #74f844 30%, #b1ef60 70%, transparent 50%);
+                border-radius: 50%;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+            }
+
+            #why-buy .round-2 {
+                width: 1500px;
+                height: 1500px;
+                background: radial-gradient(circle, transparent 40%, #93fa3a 40%, #81f324 60%, transparent 60%);
+                /* background: radial-gradient(circle, transparent 50%, #74f844  30%, #b1ef60 70%, transparent 50%); */
+            }
+
+            #why-buy img {
+                width: 500px;
+                height: 500px;
+            }
+
+            #why-buy .warranty {
+                padding: 40px;
+            }
+
+            #why-buy .warranty img {
+                width: 100%;
+                height: 86%;
+                border: 1px solid red;
+            }
+
+            #why-buy .warranty .grid-box {
+                display: flex;
+                gap: 10px;
+                height: 250px;
+            }
+
+            #why-buy .warranty .grid-box .card,
+            .warranty .flex-box .card2 {
+                width: 25%;
+                background-color: #fff;
+                border-radius: 10px;
+            }
+
+            #why-buy .warranty .grid-box .wide-card {
+                width: 50%;
+                background-color: #fff;
+                border-radius: 10px;
+            }
+
+            #why-buy .warranty .flex-box .wide-card2 {
+                width: 75%;
+                border-radius: 10px;
+                border: 2px solid #93fa3a;
+                display: flex;
+                flex-direction: column;
+                gap: 10px;
+                /* grid-template-columns: 1fr 1fr; */
+            }
+
+            #why-buy .warranty .flex-box {
+                display: flex;
+                gap: 10px;
+                height: 400px;
+                margin-top: 10px;
+            }
+
+            #why-buy .warranty .flex-box .wide-card2 div {
+                display: flex;
+                gap: 10px;
+                height: 100%;
+            }
+
+            #why-buy .warranty .flex-box .wide-card2 div .sm-card {
+                width: 30%;
+                height: 100%;
+                background-color: #fff;
+                display: flex;
+                flex-direction: column;
+            }
+
+            #why-buy .warranty .flex-box .wide-card2 div .lg-card {
+                width: 70%;
+                height: 100%;
+                background-color: #fff;
+                display: flex;
+                flex-direction: column;
+            }
+
+            #oraimoclub {
+                padding: 15px 40px;
+            }
+
+            #oraimoclub button {
+                background-color: #000;
+                padding: 5px 10px;
+                border-radius: 20px;
+                border: none;
+                color: #fff;
+                margin: 10px 0;
+            }
+            #oraimoclub .card-group {
+                display: flex;
+                gap: 30px;
+                margin: 20px 0;
+                overflow: hidden;
+            }
+            #oraimoclub .card-group img {
+                width: 250px !important;
+                height: 250px !important; 
+            }
+            #oraimoclub .card-track {
+                width: 30%;
+                margin: auto;
+                height: 10px;
+                display: flex;
+                justify-content: center;
+                gap: 10px;
+            }
+            #oraimoclub .card-track div {
+                width: 10px;
+                height: 10px;
+                background-color: #ccc;
+                border-radius: 50%;
+            }
+
+            #footer {
+                height: 60vh;
+                background-color: #000;
+            }
+
+            #footer .follow-us,
+            #footer .copyright {
+                height: 80px;
+                background-color: #1c1414;
+                padding: 10px 25px;
+                display: flex;
+                justify-content: space-between;
+                align-items: center;
+            }
+
+            #footer .socials {
+                color: #fff;
+            }
+
+            #footer .socials ul {
+                list-style: none;
+                display: flex;
+                gap: 25px;
+                margin-top: 8px;
+                font-size: 1.3rem;
+            }
+
+            #footer .download {
+                display: flex;
+                /* gap: 10px; */
+            }
+
+            #footer .download button {
+                border: none;
+                background-color: transparent;
+            }
+
+            #footer .download button img {
+                width: 70%;
+            }
+
+            #footer .download .oraimo-store img {
+                width: 50px;
+                height: 50px;
+            }
+
+            #footer .download .oraimo-store {
+                display: flex;
+                align-items: center;
+                gap: 10px;
+            }
+
+            #footer .download .oraimo-store h6,
+            #footer .download p {
+                color: #fff;
+            }
+
+            #footer .content {
+                display: flex;
+                gap: 60px;
+                padding: 15px 25px;
+            }
+
+            #footer .content h5 {
+                color: #fff;
+            }
+
+            #footer .content p {
+                color: #ccc;
+                margin: 15px 0;
+                font-size: 0.8rem;
+            }
+
+            #footer .copyright {
+                margin-top: 20px;
+                text-align: center;
+                color: #fff;
+                justify-content: center !important;
+            }
+        </style>
+
+        <section id="why-buy">
+            <h3 style="text-align: center; margin-bottom: 30px;">WHY BUY FROM oraimo </h3>
+            <div class="container">
+                <div class="round-2">
+                    <div class="round-1">
+                        <img src="Image/Africa-NO.1-en.svg" alt="">
+                    </div>
+                </div>
+            </div>
+
+
+            <div class="warranty">
+                <div class="grid-box">
+                    <div class="card">
+                        <h5>1 YEAR WARANTY ONLY REPLACE NO REPAIR</h5>
+                        <img src="Image/icon-1-year-d-7.svg" alt="">
+                    </div>
+                    <div class="wide-card"></div>
+                    <div class="card">
+                        <h5>BUY TO GET ORAIMO EXPLORER POINTS, EXRA POINTS FOR MEMBERS</h5>
+                        <img src="Image/icon-point-d.webp" alt="">
+                    </div>
+                </div>
+                <div class="flex-box">
+                    <div class="card2">
+                        <div>
+                            <h5>ACCESIBLE CUSTOMER SERVICE</h5>
+                            <img src="Image/icon-cs-women-d-7.webp" alt="">
+                        </div>
+                    </div>
+                    <div class="wide-card2">
+                        <div>
+                            <div class="sm-card">
+                                <h5>ORAIMO AUTHENTICITY & BEST PRICE GARUANTEED</h5>
+                                <img src="Image/icon-authenticity-d.svg" alt="">
+                            </div>
+                            <div class="lg-card">
+                                <h5>FREE SHIPPING OVER #30000 in Lagos DOOR to DOOR DELIVERY</h5>
+                                <img src="Image/icon-o-club-ng-d.svg" alt="">
+                            </div>
+                        </div>
+                        <div>
+                            <div class="lg-card">
+                                <h5>FREE SHIPPING OVER #30000 in Lagos DOOR to DOOR DELIVERY</h5>
+
+                                <img src="Image/icon-free-d-7.svg" alt="">
+                            </div>
+                            <div class="sm-card">
+                                <h5>NATIONWIDE OFFLINE AFTER SALES OUTLETS</h5>
+                                <img src="Image/icon-carlcare-service-d-7.svg" alt="">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="oraimoclub">
+            <h1>@oraimoclub</h1>
+            <button>follow us</button>
+            <p>Are you an explorer at heart, always seeking new experiences? Join us at oraimo as we embark on exciting
+                journeys together. Share your incredible moments with oraimo by posting your photos on Instagram using
+                the hashtag #oraimoclub and tagging @oraimoclub. By doing so, you stand a chance to receive a special
+                gift from us. Let's Keep Exploring and creating memories with oraimo! #oraimo #ExploreWithoraimo</p>
+            <div class="card-group">
+                <!-- <div class="card"> -->
+                    <img src="Image/card-img1.webp" alt="">
+                <!-- </div> -->
+                <!-- <div class="card"> -->
+                    <img src="Image/card-img2.webp" alt="">
+                <!-- </div> -->
+                <!-- <div class="card"> -->
+                    <img src="Image/card-img3.webp" alt="">
+                <!-- </div> -->
+                <!-- <div class="card"> -->
+                    <img src="Image/card-img4.webp" alt="">
+                <!-- </div> -->
+                <!-- <div class="card"> -->
+                    <img src="Image/card-img5.webp" alt="">
+                <!-- </div> -->
+                <!-- <div class="card"> -->
+                    <img src="Image/card-img6.webp" alt="">
+                <!-- </div> -->
+                <!-- <div class="card"> -->
+                    <img src="Image/card-img7.webp" alt="">
+                <!-- </div> -->
+                <!-- <div class="card"> -->
+                    <img src="Image/card-img8.webp" alt="">
+                <!-- </div> -->
+                <!-- <div class="card"> -->
+                    <img src="Image/card-img9.webp" alt="">
+                <!-- </div> -->
+            </div>
+
+            <div class="card-track">
+                <div></div>
+                <div></div>
+                <div></div>
+                <div></div>
+                <div></div>
+                <div></div>
+                <div></div>
+                <div></div>
+            </div>
+        </section>
+
+        <footer id="footer">
+            <div class="follow-us">
+                <div class="socials">
+                    <h5>FOLLOW US</h5>
+                    <ul>
+                        <li><i class="ri-instagram-fill"></i></li>
+                        <li><i class="ri-facebook-circle-fill"></i></li>
+                        <li><i class="ri-youtube-fill"></i></li>
+                        <li><i class="ri-twitter-x-line"></i></li>
+                        <li><i class="ri-tiktok-fill"></i></li>
+                    </ul>
+                </div>
+
+                <div class="download">
+                    <div class="oraimo-store">
+                        <img src="Image/app-store.png" alt="">
+                        <div>
+                            <h6>Download oraimo store App</h6>
+                            <p style="font-size: 0.5rem;">Get access to app exclusive offer!</p>
+                        </div>
+                    </div>
+                    <button>
+                        <img src="Image/google-play-white.svg" alt="">
+                        <!-- <div>
+                        <span>GET IT ON</span>
+                        <span>Google  Play</span>
+                    </div> -->
+                    </button>
+                    <button>
+                        <img src="Image/app-store-white.svg" alt="">
+                        <!-- <div>
+                        <span>Download on the</span>
+                        <span>App Store</span>
+                    </div> -->
+                    </button>
+                </div>
+            </div>
+
+            <div class="content">
+                <div class="customer">
+                    <h5>Customer Service</h5>
+                    <p>Service Hours:</p>
+                    <h5>Monday-Friday 9AM to 6PM</h5>
+                    <p>Phone:</p>
+                    <h5>+234 818 135 3103 (First Choice)
+                        +234 809 604 0753</h5>
+                    <p>Email:</p>
+                    <h5>care.ng@oraimo.com</h5>
+                    <p>WhatsApp:</p>
+                    <h5>+234 916 459 8060/ +234 818 642 3337</h5>
+                </div>
+
+                <div class="about">
+                    <h5>About</h5>
+                    <p><a href="">About us</a></p>
+                    <p><a href="">Where to buy</a></p>
+                    <p><a href="">O-CLUB</a></p>
+                    <p><a href="">Explorer Point Program</a></p>
+                </div>
+                <div class="terms">
+                    <h5>Terms</h5>
+                    <p>Warranty</p>
+                    <p>Shipping & Delivery</p>
+                    <p>Return & Refund Policy</p>
+                    <p>Tems & Condition Policy</p>
+                    <p>Privacy Policy</p>
+                </div>
+                <div class="help">
+                    <h5>Get Help</h5>
+                    <p>Track Order</p>
+                    <p>Visit Carlcare</p>
+                    <p>Contact Us</p>
+                    <p>Online Shopping Guide</p>
+                    <p>Product Authentication</p>
+                </div>
+            </div>
+            <div class="copyright">
+                <div>
+                    <img src="Image/logo2.png" alt="">
+                    <p style="font-size: 0.6rem;">&copy; 2013-2024 oraimo Copyright.</p>
+                </div>
+            </div>
+        </footer>
+</body>
+
+</html>
