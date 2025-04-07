@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg id="_图层_1" data-name="图层 1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 21.76 21.76">
+  <g id="icon-1">
+    <path d="m10.88.25C5.01.25.25,5,.25,10.87s4.76,10.64,10.63,10.64,10.63-4.76,10.63-10.64S16.76.25,10.88.25Z" style="fill: none; stroke: #000; stroke-linecap: round; stroke-miterlimit: 10; stroke-width: .5px;"/>
+    <g>
+      <g>
+        <path d="m10.66,9.13l2.21,2.21c.65.65.65,1.71,0,2.36-.65.65-1.71.65-2.36,0l-2.21-2.21-2.35,2.35,2.23,2.23c1.95,1.95,5.11,1.95,7.06,0h0c1.95-1.95,1.95-5.11,0-7.05l-2.23-2.23-2.35,2.34Z" style="fill: #000; stroke-width: 0px;"/>
+        <rect x="4.829" y="11.548" width="3.34" height=".87" transform="translate(-6.57 8.104) rotate(-44.996)" style="fill: #000; stroke-width: 0px;"/>
+        <rect x="9.523" y="6.846" width="3.34" height=".87" transform="translate(-1.87 10.046) rotate(-44.996)" style="fill: #000; stroke-width: 0px;"/>
+      </g>
+      <polygon points="9.61 3.52 9.61 5.36 11.06 4.5 10.11 6.78 10.16 5.54 8.78 6.6 9.61 3.52" style="fill: #000; stroke-width: 0px;"/>
+      <polygon points="5.1 8.32 5.1 10.16 6.55 9.3 5.6 11.58 5.65 10.34 4.27 11.4 5.1 8.32" style="fill: #000; stroke-width: 0px;"/>
+    </g>
+  </g>
+</svg>

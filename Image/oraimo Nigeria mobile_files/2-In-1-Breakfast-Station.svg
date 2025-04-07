@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg id="_图层_1" data-name="图层 1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 31.98 31.98">
+  <g id="icon-3">
+    <g>
+      <path d="m15.99,0C7.16,0,0,7.16,0,15.99s7.16,15.99,15.99,15.99,15.99-7.16,15.99-15.99S24.82,0,15.99,0Z" style="fill: #000; stroke-width: 0px;"/>
+      <path d="m15.99,5.92c-5.72,0-10.36,4.64-10.36,10.36s4.64,10.36,10.36,10.36,10.36-4.64,10.36-10.36c-.01-5.73-4.64-10.36-10.36-10.36Zm0,19.8c-5.21,0-9.44-4.23-9.44-9.44S10.78,6.84,15.99,6.84s9.44,4.23,9.44,9.44-4.23,9.44-9.44,9.44Z" style="fill: #fff; stroke-width: 0px;"/>
+      <circle cx="25.43" cy="16.27" r="3.33" style="fill: #fff; stroke-width: 0px;"/>
+      <circle cx="25.43" cy="16.27" r="1.74" style="fill: #000; stroke-width: 0px;"/>
+      <circle cx="6.54" cy="16.27" r="3.33" style="fill: #fff; stroke-width: 0px;"/>
+      <text transform="translate(11.411 21.464)" style="fill: #fff; font-family: ArialMT, Arial; font-size: 16.235px; isolation: isolate;"><tspan x="0" y="0">2</tspan></text>
+    </g>
+  </g>
+</svg>

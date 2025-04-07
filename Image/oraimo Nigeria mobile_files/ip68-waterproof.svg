@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg id="_图层_1" data-name="图层 1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 12.76 12.76">
+  <g id="icon-1" transform="rotate(90) translate(0 -12.75)">
+    <g>
+      <path d="m0,6.38c0,3.52,2.86,6.38,6.38,6.38s6.38-2.86,6.38-6.38S9.9,0,6.38,0,0,2.86,0,6.38Z" style="fill: #000; stroke-width: 0px;"/>
+      <path d="m2.01,6.38c1.42,1.13,3.52,3,5.27,3s2.94-1.33,2.94-3c0-1.66-1.19-3-2.94-3s-3.85,1.87-5.27,3Z" style="fill: none; stroke: #fff; stroke-miterlimit: 10; stroke-width: .454px;"/>
+      <path d="m4.79,7.53c.95.9,3.42,1.61,4.02.27.17-.38-.31-.96-1.11-.33-.45.34-1.59.72-2.91.06Z" style="fill: #fff; stroke-width: 0px;"/>
+    </g>
+  </g>
+</svg>

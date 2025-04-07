@@ -1,0 +1,412 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Learning Javascript</title>
+</head>
+<style>
+    h2 {
+        color: red;
+    }
+</style>
+
+<body>
+    <h2>Start writing javaScript code...</h2>
+    <button>Change style</button>
+</body>
+<script>
+    // var myName = "Pharhan"
+    // var age = 17
+    // var addMyAge = Number(age) + Number(age)
+    // document.write("<h1>My name is " + myName  + " I'm a student of Aptech and I'm " +age+ " yrs of age.</h1>")
+    // document.write(`<h2>My name is ${myName}, I'm a student of Aptech and I'm ${age}yrs of age.</h2> <br>`)
+
+    // var enterName = prompt("Enter your name: ")
+    // var enterCountry  = prompt("Enter your country:")
+
+    // var firstChar = enterName.slice(0, 1).toUpperCase()
+    // var restOfNames = enterName.slice(1, enterName.length).toLowerCase()
+
+    // var completeName = firstChar + restOfNames
+    // console.log("This is concatination using string method: ", firstChar.concat(restOfNames))
+
+
+    // document.write(completeName);
+
+    // console.log(enterName);
+    // console.log(enterCountry);
+
+
+    //Arithmetic Operator
+    // +
+    // -
+    // *
+    // /
+    // %
+    // **
+
+    let a = 15
+    let b = 9
+
+    // var x = +prompt("Enter first Number: ")
+    // var y = +prompt("Enter second Number: ")
+
+    // var add = x+y
+    // var sub = x-y
+    // var mul = x*y
+    // var div = x/y
+
+    // document.write(`<h2>Add: ${add} <br> Subtraction: ${sub} <br>Multiplication: ${mul} <br>Divition: ${div}` )
+
+    // console.log(a % b)
+    // console.log(a ** 2)
+    // console.log(b ** 3)
+
+    //Unary Operator
+    // ++ -> Increment
+    // -- -> Decrement
+    // x +=2
+    // x +=3
+
+    // Relational Or Comparison Operator 
+    // >    -> Greater than
+    // <    -> Lesser than  
+    // >=   -> Greater than or equal to
+    // <=   -> Lesser than or equal to
+    // !=   -> Not Equal to 
+    // !==  -> Strict Not Equal to  
+    // ==   -> Equal to
+    // ===  -> Strict Equal to
+
+    // Ternary Operator 
+    // enterName.length >= 2 ? 
+    // alert("Name added successfully!") : 
+    // alert("Sorry name must not be less than 3 character!") 
+
+    // completeName === completeName ? alert("Name has already been added to list!")
+    //                               : alert("Name added successfully!")
+
+    // var g = "7"
+    // var h = 7
+
+    // console.log(g == h) //True
+    // console.log(g === h) //False
+
+    //Logical Operator
+    // &&  -> AND
+    // ||  -> OR
+    // !  ->  NOT
+
+    // var guest1 = prompt("Enter guest name: ")
+    // var guest2 = prompt("Enter guest name: ")
+    // var guest3 = prompt("Enter guest name: ")
+
+    // var ticketId1 = prompt("Enter your ticket ID: ")
+    // var ticketId2 = prompt("Enter your ticket ID: ")
+    // var ticketId3 = prompt("Enter your ticket ID: ")
+
+    // var expGuest1 = "Muhammed"
+    // var expGuest2 = "Pharhan"
+    // var expGuest3 = "Moyo"
+
+    // var ticket1 = "e1"
+    // var ticket2 = "d2"
+    // var ticket3 = "b9"
+
+    // guest1 !== expGuest1 || 
+    // guest1 !== expGuest2 || 
+    // guest1 !== expGuest3  && 
+    // ticketId1 !== ticket1 || 
+    // ticketId1 !== ticket2 || 
+    // ticketId1 !== ticket3
+    //     ? alert("Sorry, we are not expecting you as a guest today!")
+    //     : alert("Thank you for coming to my show today!")
+
+
+
+    //if statement
+    // let age = +prompt("Enter age:")  //check if age is greater 18 - 60
+    // if(age > 18 && age <60) {
+    //     alert("you are eligible to vote!")
+    // }else {
+    //     alert("Sorry you can't vote!")
+    // }
+
+    // let hour = 20
+
+    // if(hour < 12) {
+    //     console.log("Good morning..")
+    // }else if (hour < 18) {
+    //     console.log("Good afternoon...")
+    // }else {
+    //     console.log("Good evening...")
+    // }
+
+
+    // let studentName = prompt("What's your name:")
+    // let mathScore = +prompt("Enter score for Math:")
+    // let engScore = +prompt("Enter score for English:")
+    // let biologyScore = +prompt("Enter score for Biology:")
+    // let physicsScore = +prompt("Enter score for Physics:")
+    // let chemScore = +prompt("Enter score for Chemistry:")
+
+
+    // let score = (mathScore + engScore +biologyScore + physicsScore + chemScore) / 5
+
+    // // let score = avg
+    // // let grade;
+
+    // if(score > 80) {
+    //     grade = "A"
+    //     console.log("Your grade is A")
+    // }else if(score >= 70  && score <=80) {
+    //     grade = "B"
+    //     console.log("Your grade is B")
+    // }else if(score >= 60  && score <=70) {
+    //     grade = "C"
+    //     console.log("Your grade is C")
+    // }else if(score >= 50  && score <=60) {
+    //     grade = "D"
+    //     console.log("Your grade is D")
+    // }else if(score >= 40  && score <=50) {
+    //     grade = "E"
+    //     console.log("Your grade is E")
+    // }else if(score < 40) {
+    //     grade = "Sorry, you failed the course..."
+    //     console.log("You fail this course!")
+    // }
+
+
+    // document.write(`<h1>Name: ${studentName} <br>
+    //                 Math Score: ${mathScore} <br>
+    //                 English Score: ${engScore} <br>
+    //                 Biology Score: ${biologyScore} <br>
+    //                 Physics Score: ${physicsScore} <br>
+    //                 Chemistry Score: ${chemScore} <br>
+    //                 Grade: ${grade} 
+    //                 </h1>`)
+
+
+
+    //for loop
+    // for(var x = 1; x<=90; x++) {
+    //     if(x % 2 == 0 && x % 3 === 0){
+    //         console.log("Hello world!!")
+    //     }else if(x % 2 == 0 ){
+    //         console.log("Hello!!")
+    //     }else {
+    //         console.log(x);
+    //     }
+    // }
+
+    // //While loop
+    // var y = 50
+    // while(y >= 1) {
+    //     document.write(`<h1>${y}</h1>`)
+
+    //     y--
+    // }
+
+    // var t = 5
+    // do {
+    //     console.log("Hey!! I'm do while loop.")
+    //     t--
+    // }while(t <= 1)
+
+
+    //Arrays -> Collection of data type stored in a single variable
+
+    // let data =  ["Dog", 26, false, "Lion", ["Cat", "Parrot", "Chicken"],]
+    // data.push("Rocket")
+    // data.unshift("Tiger")
+    // data.shift()
+    // data.pop()
+    // console.log(data.includes(56))
+
+    // let data2 = data.concat(data[data.length - 1])
+
+    // var hello = "Hello"
+    // var world = "world"
+    // console.log(hello.concat(world))
+
+    // // let spt = hello.split("-")
+    // // console.log(spt)
+
+    // let numbers = [6, 7,9,10,23, 12]
+    // let nameOfDog = ["Jack","Bingo","Django", "Pickle"]
+    // //Higher order array method
+    // data[4].forEach(el => {
+    //     document.write(`<h3>${el} <br></h3>`)
+    // })
+
+    // let check = numbers.filter(n => n > 9)
+    // console.log(check)
+
+
+    // let trans = numbers.map(number => number * 2);
+    // console.log(trans)
+
+    // console.log(numbers.sort((a, b) => a - b))
+    // console.log(nameOfDog.sort())
+
+    // let bing = nameOfDog.find(el => el == "Bingo")      
+    // let jack = nameOfDog.some(el => el == "Jack")
+    // console.log(jack)
+
+
+    // let phone_no = prompt("Enter Phone number:")
+    // //Object
+    // const student1 = {
+    //     fName: "Pharhan",
+    //     lName: "Bosun",
+    //     email: "pharhan20@gmail.com",
+    //     gender: "M",
+    //     course: ["AI & ML", "Software Engineering", "Cyber Security"],
+    //     isActive: true,
+    //     phone_no: phone_no
+    // }
+
+    // console.log(student1)
+
+    // const student2 = {
+    //     fName: "Oluchi",
+    //     lName: "Joseph",
+    //     email: "josepholuchi@gmail.com",
+    //     gender: "F",
+    //     course: ["Data Science", "Multimedia"],
+    //     isActive: false
+    // }
+
+    // const student3 = {
+    //     fName: "Blessing",
+    //     lName: "Samuel",
+    //     email: "samuelblessing@gmail.com",
+    //     gender: "F",
+    //     course: ["UI/UX", "Web Development", "Blockchain Development"],
+    //     isActive: false
+    // }
+
+    // let students = [student1, student2, student3]
+    // console.log(students)
+
+    // students.forEach(student => {
+    //     // if(student.isActive){
+    //     //   document.write(student.course)
+    //     // }
+    //     if(student.gender === "F"){
+    //       document.write(student.fName)
+    //     }
+    // })
+
+    // let gen = students.find(g => g.gender === "F") 
+    // console.log(gen)
+
+
+
+
+
+    // const {fName, lName, email} = student1
+    // console.log(fName, lName, email)
+    // console.log(student1.fName)
+
+
+
+
+
+
+
+
+    // console.log(data2)
+    // console.log(data[data.length - 1]) //Rocket
+
+
+    // let lastArray = data[4].length -1
+
+    // for(var i = 0; i <= lastArray; i++) {  
+    //      console.log(data[4][i])
+    // }
+
+
+
+
+    //function
+
+    // const calc = (x, y, z, op) => {
+    //     switch(op) {
+    //         case "+": 
+    //         return x + y + z
+    //         case "-": 
+    //         return x - y - z
+    //         case "/": 
+    //         var divide = Math.round(x / y / z)
+    //         return divide
+    //         case "*": 
+    //         return x * y * z
+    //         case "**": 
+    //         return x ** y ** z
+    //     }
+    // }
+    // var operator = prompt("Enter operator for this calculation:")
+    // var number1 = +prompt("Enter first number:")
+    // var result = calc(3, 4, 5, "*")
+    // console.log("Result", result)
+
+    const randomNumbers = Math.floor(Math.random() * 20)
+    Math.min()
+    Math.max()
+    Math.abs()
+    Math.sqrt(25)
+
+    console.log(randomNumbers)
+
+    //DOM manipulation
+    let h2 = document.querySelector("h2")
+    let button = document.querySelector("button")
+    let bgStyle = true
+
+
+
+    button.addEventListener("click", () => {
+        if (bgStyle) {
+            h2.textContent = "Pharhan"
+            h2.style.color = "blue"
+            h2.style.backgroundColor = "brown"
+            bgStyle = false
+        } else if (!bgStyle) {
+            h2.textContent = "Hello"
+            h2.style.color = "red"
+            h2.style.backgroundColor = "white"
+            bgStyle = true
+        }
+    })
+
+
+
+
+
+
+
+
+    // let scores = [80, 90, 50, 60]
+    // let sum = 0
+    // function hello (scores) {
+    //     scores.forEach(score => {
+    //         sum += score
+    //     });
+    //     return sum / scores.length
+    // }
+
+
+
+
+    // sayMyName("Hello", 9, 3)
+
+    // var avg = hello(scores)
+    // console.log(avg)
+
+
+</script>
+
+</html>

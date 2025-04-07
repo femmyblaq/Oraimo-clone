@@ -1,0 +1,185 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <!-- Remix Icon CDN  -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/remixicon/4.4.0/remixicon.min.css"
+        integrity="sha512-6sfYTBLNjOZhwJ5g/J0529qHqIdXxO1BycUHd1LIJjEzVCzX8cHtoXDgd+ylrqCl/OZM/RMDgkn2Dd41lJsJjw=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+</head>
+<style>
+    * {
+        padding: 0;
+        margin: 0;
+        box-sizing: border-box;
+        font-family: Arial, Helvetica, sans-serif;
+    }
+
+    body {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+    }
+
+    header {
+        background-color: black;
+        color: #fff;
+        padding: 15px;
+        text-align: center;
+    }
+
+    form {
+        width: 50%;
+        box-shadow: 4px 4px 5px #ccc;
+        padding: 20px;
+        margin-top: 40px !important;
+        border-radius: 5px;
+        margin: auto;
+    }
+
+    form div {
+        display: flex;
+        flex-direction: column;
+        gap: 15px;
+    }
+
+    form div input {
+        padding: 5px;
+        border-radius: 5px;
+        border: 2px solid #ccc;
+    }
+
+    form div button {
+        background-color: black;
+        color: #fff;
+        padding: 5px;
+    }
+
+    .container {
+        width: 50%;
+        box-shadow: 4px 4px 5px #ccc;
+        padding: 20px;
+        margin-top: 40px !important;
+        border-radius: 5px;
+        margin: auto;
+    }
+
+    .container h4 {
+        text-align: center;
+        margin-bottom: 20px;
+    }
+
+    .container ul {
+        list-style: none;
+    }
+
+    .container li {
+        padding: 10px;
+        /* height: 30px; */
+        margin: 8px 0;
+        border-radius: 5px;
+        font-weight: 600;
+        background-color: rgb(184, 250, 217);
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+
+    .container li button {
+        background-color: red;
+        color: #fff;
+        border: none;
+        border-radius: 5px;
+        padding: 5px;
+        cursor: pointer;
+    }
+</style>
+
+<body>
+    <header>
+        <h3>Add User</h3>
+    </header>
+
+    <form action="" onsubmit="submitHandler(event)">
+        <div>
+            <input id="fullname" type="text" placeholder="Enter fullname...">
+            <input id="email" type="email" placeholder="Enter email..">
+            <button type="submit">Add User</button>
+        </div>
+    </form>
+    <div class="container">
+        <h4>List of added users</h4>
+        <ul>
+            <li>
+                <div>
+                    <span>Jonh Maxwell</span>
+                    <small>johnmaxwell@gmail.com</small>
+                </div>
+                <div>
+                    <button class="rm-btn"><i class="ri-delete-bin-line"></i></button>
+                </div>
+            </li>
+
+        </ul>
+    </div>
+</body>
+
+<script>
+    const fullname = document.querySelector("#fullname")
+    const email = document.querySelector("#email")
+    const ul = document.querySelector("ul")
+
+
+    const submitHandler = (e) => {
+        e.preventDefault();
+
+
+
+
+
+       
+
+
+
+
+
+
+
+
+
+
+        const li = document.createElement("li")
+        const btn = document.createElement("button")
+        const icon = document.createElement("i")
+        icon.className = "ri-delete-bin-line"
+        btn.className = "rm-btn"
+        btn.appendChild(icon)
+        li.appendChild(btn)
+        // li.innerHTML = `<div class="parent">
+        //                     <span>${fullname.value}</span> 
+        //                     <small>${email.value}
+        //                 </div>
+        //                 `
+        ul.appendChild(li)
+
+
+
+
+        const rmBtn = document.querySelector(".rm-btn")
+        const par = document.querySelector("parent")
+        // rmBtn.forEach((btn, i) => {
+            rmBtn.addEventListener("click", () => {
+                alert("I got clicked")
+                
+                par.style.display = "none";
+            })
+        // })
+        console.log(li)
+    }
+
+</script>
+
+</html>

@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg id="_图层_1" data-name="图层 1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 15.6 15.6">
+  <g id="icon-3">
+    <path d="m15.6,7.8c0,4.31-3.49,7.8-7.8,7.8S0,12.11,0,7.8,3.49,0,7.8,0s7.8,3.5,7.8,7.8Z" style="fill: #000; stroke-width: 0px;"/>
+    <g>
+      <g>
+        <path d="m10.54,11.51h-6.16c-.35,0-.63-.28-.63-.63v-6.15c0-.35.28-.63.63-.63h6.15c.35,0,.63.28.63.63v6.15c.01.35-.28.63-.62.63Z" style="fill: none; stroke: #fff; stroke-linecap: round; stroke-linejoin: round; stroke-width: .5px;"/>
+        <path d="m10.21,10.96h-5.51c-.23,0-.41-.18-.41-.41v-5.51c0-.23.18-.41.41-.41h5.51c.23,0,.41.18.41.41v5.51c0,.23-.18.41-.41.41Z" style="fill: #fff; stroke-width: 0px;"/>
+        <g>
+          <line x1="5.79" y1="2.76" x2="5.79" y2="4.1" style="fill: none; stroke: #fff; stroke-linecap: round; stroke-linejoin: round; stroke-width: .5px;"/>
+          <line x1="7.77" y1="2.76" x2="7.77" y2="4.1" style="fill: none; stroke: #fff; stroke-linecap: round; stroke-linejoin: round; stroke-width: .5px;"/>
+          <line x1="9.74" y1="2.76" x2="9.74" y2="4.1" style="fill: none; stroke: #fff; stroke-linecap: round; stroke-linejoin: round; stroke-width: .5px;"/>
+        </g>
+        <g>
+          <line x1="5.79" y1="11.51" x2="5.79" y2="12.85" style="fill: none; stroke: #fff; stroke-linecap: round; stroke-linejoin: round; stroke-width: .5px;"/>
+          <line x1="7.77" y1="11.51" x2="7.77" y2="12.85" style="fill: none; stroke: #fff; stroke-linecap: round; stroke-linejoin: round; stroke-width: .5px;"/>
+          <line x1="9.74" y1="11.51" x2="9.74" y2="12.85" style="fill: none; stroke: #fff; stroke-linecap: round; stroke-linejoin: round; stroke-width: .5px;"/>
+        </g>
+        <g>
+          <line x1="12.66" y1="6.83" x2="11.17" y2="6.83" style="fill: none; stroke: #fff; stroke-linecap: round; stroke-linejoin: round; stroke-width: .5px;"/>
+          <line x1="12.66" y1="5.43" x2="11.17" y2="5.43" style="fill: none; stroke: #fff; stroke-linecap: round; stroke-linejoin: round; stroke-width: .5px;"/>
+          <line x1="12.66" y1="8.5" x2="11.17" y2="8.5" style="fill: none; stroke: #fff; stroke-linecap: round; stroke-linejoin: round; stroke-width: .5px;"/>
+          <line x1="12.66" y1="10.17" x2="11.17" y2="10.17" style="fill: none; stroke: #fff; stroke-linecap: round; stroke-linejoin: round; stroke-width: .5px;"/>
+        </g>
+        <g>
+          <line x1="3.68" y1="6.83" x2="2.19" y2="6.83" style="fill: none; stroke: #fff; stroke-linecap: round; stroke-linejoin: round; stroke-width: .5px;"/>
+          <line x1="3.68" y1="5.43" x2="2.19" y2="5.43" style="fill: none; stroke: #fff; stroke-linecap: round; stroke-linejoin: round; stroke-width: .5px;"/>
+          <line x1="3.68" y1="8.5" x2="2.19" y2="8.5" style="fill: none; stroke: #fff; stroke-linecap: round; stroke-linejoin: round; stroke-width: .5px;"/>
+          <line x1="3.68" y1="10.17" x2="2.19" y2="10.17" style="fill: none; stroke: #fff; stroke-linecap: round; stroke-linejoin: round; stroke-width: .5px;"/>
+        </g>
+      </g>
+      <text transform="translate(4.297 9.103)" style="fill: #000; font-family: ArialMT, Arial; font-size: 4.024px; isolation: isolate;"><tspan x="0" y="0">ENC</tspan></text>
+    </g>
+  </g>
+</svg>

@@ -17,6 +17,9 @@
     <link
         href="https://fonts.googleapis.com/css2?family=Noto+Sans:ital,wght@0,100..900;1,100..900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
         rel="stylesheet">
+
+        <!-- Css File  -->
+         <link rel="stylesheet" href="try.css">
 </head>
 <style>
     * {
@@ -153,6 +156,52 @@
         justify-content: space-around;
         align-items: center;
     }
+
+    #Heroe {
+        position: relative;
+    }
+
+    #Heroe .sliders .slides {
+        display: none;
+        /* animation: slide-out 200ms forwards; */
+    }
+
+    #Heroe .buttons {
+        position: absolute;
+        width: 100%;
+        display: flex;
+        justify-content: space-between;
+        top: 50%;
+        transform: translateY(-50%);
+    }
+
+    #Heroe .buttons button {
+        width: 50px;
+        height: 50px;
+        border: none;
+        color: #fff;
+        font-size: 2rem;
+        border-radius: 50px;
+        background-color: rgba(0, 0, 0, 0.6);
+        cursor: pointer;
+    }
+
+    #Heroe .sliders .slides.active {
+        display: block;
+        transition: all 250ms ease-out;
+    }
+
+    /* @keyframes slide-out {
+        from {
+            transform: translateX(0);
+            display: none;
+        }
+        to {
+            transform: translateX(-100%);
+            display: none;
+
+        }
+    } */
 
     #sub-heroe div {
         display: flex;
@@ -336,6 +385,10 @@
         height: 8px;
         background-color: #e8dcdc;
         border-radius: 50px;
+        transition: all 0.7s ease;
+    }
+    #best-seller .scroll-track div.active {
+        background-color: #74f844;
     }
 </style>
 
@@ -343,6 +396,20 @@
     <marquee>
         <p>Register ans subscribe now to Enjoy 600 points. Enjoy exclusive discounts, points more </p>
     </marquee>
+    <div class="slider-menu">
+        <div class="slider-top">
+            <div>
+                <i class="ri-close-large-fill"></i>
+                <img src="logo.png" alt="">
+            </div>
+        </div>
+        <ul>
+            <li><a href="">DAILY DEALS<i></i></a></li>
+            <li><a href="">HOT & NEW</a><i lass="ri-arrow-down-s-line"></i></li>
+            <li><a href="">PRODUCTS</a><i lass="ri-arrow-down-s-line"></i></li>
+            <li><a href="">SUPPORT</a><i lass="ri-arrow-down-s-line"></i></li>
+        </ul>
+    </div>
     <header>
         <div class="sub-header">
             <img src="logo.png" alt="">
@@ -392,7 +459,6 @@
                     </li>
                 </ul>
             </nav>
-
         </div>
 
         <div class="icons">
@@ -400,14 +466,24 @@
             <i class="ri-search-line"></i>
             <i class="ri-shopping-cart-line"></i>
             <i class="ri-user-line" style="margin-right: 0;"></i>
+            <button><i class="ri-menu-line"></i></button>
         </div>
 
 
 
     </header>
     <section id="Heroe">
-        <img src="Image/Oraimo2.webp" style="width: 100%;" alt="">
-
+        <div class="sliders">
+            <img src="Image/Oraimo2.webp" style="width: 100%;" class="slides active" alt="">
+            <img src="Image/slide.webp" style="width: 100%;" class="slides" alt="">
+            <img src="Image/slide2.webp" style="width: 100%;" class="slides" alt="">
+            <img src="Image/slide3.webp" style="width: 100%;" class="slides" alt="">
+            <img src="Image/slide4.webp" style="width: 100%;" class="slides" alt="">
+            <img src="Image/slide.webp" style="width: 100%;" class="slides" alt="">
+        </div>
+        <div class="buttons">
+            <button class="prev"><i class="ri-arrow-left-s-line"></i></button>
+            <button class="next"><i class="ri-arrow-right-s-line"></i></button>
         </div>
     </section>
     <section id="sub-heroe">
@@ -478,27 +554,187 @@
                         </li>
                     </ul>
 
-                    <div class="price">
-                        <h3>
-                            <img src="Icons/icons8-naira-24.png" alt="">
-                            21, 900
 
-                        </h3>
-                        <h5>
-                            <img style="width: 15px;" src="Icons/icons8-naira-24.png" alt="">
-                            <s style="color: #4b4a4a;">24,800</s>
-                        </h5>
-                    </div>
-                    <div class="cart">
-                        <button class="learn">
-                            Learn more
-                        </button>
-                        <button class="add-cart">
-                            Add to cart
-                        </button>
+                    <div class="card-bottom">
+                        <div class="price">
+                            <h3>
+                                <img src="Icons/icons8-naira-24.png" alt="">
+                                21, 900
+
+                            </h3>
+                            <h5>
+                                <img style="width: 15px;" src="Icons/icons8-naira-24.png" alt="">
+                                <s style="color: #4b4a4a;">24,800</s>
+                            </h5>
+                        </div>
+                        <div class="cart" style="display: none;">
+                            <button class="learn">
+                                Learn more
+                            </button>
+                            <button class="add-cart">
+                                Add to cart
+                            </button>
+                        </div>
                     </div>
                 </div>
             </div>
+
+
+
+            <div class="product-card">
+                <div class="product-top">
+                    <img src="Image/airpod" alt="">
+
+                    <div class="rating">
+                        <h4>
+                            4.8 <i style="color: #82e600;" class="ri-star-fill"></i>
+                            <span style="color: #4b4a4a;">(846)</span>
+                        </h4>
+                    </div>
+                </div>
+
+                <div class="product-body">
+                    <h4>FreePods Neo Half In Ear True Wireless Earbuds</h4>
+                    <ul>
+                        <li>
+                            <img src="Icons/50-hr-long-playtime.svg" alt="">
+                            <span>50-hrs Long Playtime</span>
+                        </li>
+                        <li>
+                            <img src="Icons/sound360-spatial-audio.svg" alt="">
+                            <span>Sound360 Spatial Audio</span>
+                        </li>
+                    </ul>
+
+
+                    <div class="card-bottom">
+                        <div class="price">
+                            <h3>
+                                <img src="Icons/icons8-naira-24.png" alt="">
+                                21, 900
+
+                            </h3>
+                            <h5>
+                                <img style="width: 15px;" src="Icons/icons8-naira-24.png" alt="">
+                                <s style="color: #4b4a4a;">24,800</s>
+                            </h5>
+                        </div>
+                        <div class="cart" style="display: none;">
+                            <button class="learn">
+                                Learn more
+                            </button>
+                            <button class="add-cart">
+                                Add to cart
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+
+
+
+            <div class="product-card">
+                <div class="product-top">
+                    <img src="Image/airpod" alt="">
+
+                    <div class="rating">
+                        <h4>
+                            4.8 <i style="color: #82e600;" class="ri-star-fill"></i>
+                            <span style="color: #4b4a4a;">(846)</span>
+                        </h4>
+                    </div>
+                </div>
+
+                <div class="product-body">
+                    <h4>FreePods Neo Half In Ear True Wireless Earbuds</h4>
+                    <ul>
+                        <li>
+                            <img src="Icons/50-hr-long-playtime.svg" alt="">
+                            <span>50-hrs Long Playtime</span>
+                        </li>
+                        <li>
+                            <img src="Icons/sound360-spatial-audio.svg" alt="">
+                            <span>Sound360 Spatial Audio</span>
+                        </li>
+                    </ul>
+
+
+                    <div class="card-bottom">
+                        <div class="price">
+                            <h3>
+                                <img src="Icons/icons8-naira-24.png" alt="">
+                                21, 900
+
+                            </h3>
+                            <h5>
+                                <img style="width: 15px;" src="Icons/icons8-naira-24.png" alt="">
+                                <s style="color: #4b4a4a;">24,800</s>
+                            </h5>
+                        </div>
+                        <div class="cart" style="display: none;">
+                            <button class="learn">
+                                Learn more
+                            </button>
+                            <button class="add-cart">
+                                Add to cart
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+
+            <div class="product-card">
+                <div class="product-top">
+                    <img src="Image/airpod" alt="">
+
+                    <div class="rating">
+                        <h4>
+                            4.8 <i style="color: #82e600;" class="ri-star-fill"></i>
+                            <span style="color: #4b4a4a;">(846)</span>
+                        </h4>
+                    </div>
+                </div>
+
+                <div class="product-body">
+                    <h4>FreePods Neo Half In Ear True Wireless Earbuds</h4>
+                    <ul>
+                        <li>
+                            <img src="Icons/50-hr-long-playtime.svg" alt="">
+                            <span>50-hrs Long Playtime</span>
+                        </li>
+                        <li>
+                            <img src="Icons/sound360-spatial-audio.svg" alt="">
+                            <span>Sound360 Spatial Audio</span>
+                        </li>
+                    </ul>
+
+
+                    <div class="card-bottom">
+                        <div class="price">
+                            <h3>
+                                <img src="Icons/icons8-naira-24.png" alt="">
+                                21, 900
+
+                            </h3>
+                            <h5>
+                                <img style="width: 15px;" src="Icons/icons8-naira-24.png" alt="">
+                                <s style="color: #4b4a4a;">24,800</s>
+                            </h5>
+                        </div>
+                        <div class="cart" style="display: none;">
+                            <button class="learn">
+                                Learn more
+                            </button>
+                            <button class="add-cart">
+                                Add to cart
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
 
 
             <div class="product-card">
@@ -532,6 +768,7 @@
                             <span> Camera Remote, Preview Sync</span>
                         </li>
                     </ul>
+                    <div class="card-bottom">
 
                     <div class="price">
                         <h3>
@@ -540,13 +777,14 @@
 
                         </h3>
                     </div>
-                    <div class="cart">
+                    <div class="cart" style="display: none;">
                         <button class="learn">
                             Learn more
                         </button>
                         <button class="add-cart">
                             Add to cart
                         </button>
+                    </div>
                     </div>
                 </div>
             </div>
@@ -583,6 +821,7 @@
                             <span> 40-Hr Long Playtime</span>
                         </li>
                     </ul>
+                    <div class="card-bottom">
 
                     <div class="price">
                         <h3>
@@ -595,13 +834,14 @@
                             <s style="color: #4b4a4a;">57,200</s>
                         </h5>
                     </div>
-                    <div class="cart">
+                    <div class="cart" style="display: none;">
                         <button class="learn">
                             Learn more
                         </button>
                         <button class="add-cart">
                             Add to cart
                         </button>
+                    </div>
                     </div>
                 </div>
             </div>
@@ -637,7 +877,8 @@
                             <span> Multi-Protection Safety System</span>
                         </li>
                     </ul>
-
+                    <div class="card-bottom">
+                    
                     <div class="price">
                         <h3>
                             <img src="Icons/icons8-naira-24.png" alt="">
@@ -649,13 +890,14 @@
                             <s style="color: #4b4a4a;">43,300</s>
                         </h5>
                     </div>
-                    <div class="cart">
+                    <div class="cart" style="display: none;">
                         <button class="learn">
                             Learn more
                         </button>
                         <button class="add-cart">
                             Add to cart
                         </button>
+                    </div>
                     </div>
                 </div>
             </div>
@@ -665,14 +907,14 @@
             <div class="next"><i class="ri-arrow-right-s-line"></i></div>
         </div>
         <div class="scroll-track">
-            <div></div>
-            <div></div>
-            <div></div>
-            <div></div>
-            <div></div>
-            <div></div>
-            <div></div>
-            <div></div>
+            <div class="ball active"></div>
+            <div class="ball"></div>
+            <div class="ball"></div>
+            <div class="ball"></div>
+            <div class="ball"></div>
+            <div class="ball"></div>
+            <div class="ball"></div>
+            <div class="ball"></div>
         </div>
     </section>
     <section style="margin-top: 30px;">
@@ -1094,12 +1336,15 @@
             }
 
             #why-buy .container {
+                width: 100vw;
                 height: 100vh;
                 display: flex;
                 justify-content: center;
                 align-items: center;
                 background-color: #a5f470;
                 overflow: hidden;
+                transition: transform 0.3s ease;
+                transform: scale(1);
             }
 
             #why-buy .round-1,
@@ -1205,16 +1450,19 @@
                 color: #fff;
                 margin: 10px 0;
             }
+
             #oraimoclub .card-group {
                 display: flex;
                 gap: 30px;
                 margin: 20px 0;
                 overflow: hidden;
             }
+
             #oraimoclub .card-group img {
                 width: 250px !important;
-                height: 250px !important; 
+                height: 250px !important;
             }
+
             #oraimoclub .card-track {
                 width: 30%;
                 margin: auto;
@@ -1223,6 +1471,7 @@
                 justify-content: center;
                 gap: 10px;
             }
+
             #oraimoclub .card-track div {
                 width: 10px;
                 height: 10px;
@@ -1321,7 +1570,6 @@
                 </div>
             </div>
 
-
             <div class="warranty">
                 <div class="grid-box">
                     <div class="card">
@@ -1377,31 +1625,31 @@
                 gift from us. Let's Keep Exploring and creating memories with oraimo! #oraimo #ExploreWithoraimo</p>
             <div class="card-group">
                 <!-- <div class="card"> -->
-                    <img src="Image/card-img1.webp" alt="">
+                <img src="Image/card-img1.webp" alt="">
                 <!-- </div> -->
                 <!-- <div class="card"> -->
-                    <img src="Image/card-img2.webp" alt="">
+                <img src="Image/card-img2.webp" alt="">
                 <!-- </div> -->
                 <!-- <div class="card"> -->
-                    <img src="Image/card-img3.webp" alt="">
+                <img src="Image/card-img3.webp" alt="">
                 <!-- </div> -->
                 <!-- <div class="card"> -->
-                    <img src="Image/card-img4.webp" alt="">
+                <img src="Image/card-img4.webp" alt="">
                 <!-- </div> -->
                 <!-- <div class="card"> -->
-                    <img src="Image/card-img5.webp" alt="">
+                <img src="Image/card-img5.webp" alt="">
                 <!-- </div> -->
                 <!-- <div class="card"> -->
-                    <img src="Image/card-img6.webp" alt="">
+                <img src="Image/card-img6.webp" alt="">
                 <!-- </div> -->
                 <!-- <div class="card"> -->
-                    <img src="Image/card-img7.webp" alt="">
+                <img src="Image/card-img7.webp" alt="">
                 <!-- </div> -->
                 <!-- <div class="card"> -->
-                    <img src="Image/card-img8.webp" alt="">
+                <img src="Image/card-img8.webp" alt="">
                 <!-- </div> -->
                 <!-- <div class="card"> -->
-                    <img src="Image/card-img9.webp" alt="">
+                <img src="Image/card-img9.webp" alt="">
                 <!-- </div> -->
             </div>
 
@@ -1501,5 +1749,7 @@
             </div>
         </footer>
 </body>
+
+<script src="try.js"></script>
 
 </html>

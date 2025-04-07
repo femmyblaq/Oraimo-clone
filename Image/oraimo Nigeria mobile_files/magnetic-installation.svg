@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg id="_图层_1" data-name="图层 1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20.364 20.364">
+  <g id="icon-1" transform="rotate(90) translate(0 -20.364)">
+    <g>
+      <g>
+        <g>
+          <path d="m6.692,13.332c-1.74,0-3.15-1.41-3.15-3.15s1.41-3.15,3.15-3.15h4.12v1.75h-4.12c-.78,0-1.41.63-1.41,1.41s.63,1.41,1.41,1.41h4.12v1.75h-4.12v-.02Z" style="fill: #000; stroke-width: 0px;"/>
+          <rect x="9.352" y="11.592" width="1.46" height="1.75" style="fill: #fff; stroke: #000; stroke-linecap: round; stroke-linejoin: round; stroke-width: .353px;"/>
+          <rect x="9.352" y="7.032" width="1.46" height="1.75" style="fill: #fff; stroke: #000; stroke-linecap: round; stroke-linejoin: round; stroke-width: .353px;"/>
+        </g>
+        <g>
+          <path d="m11.572,11.842c.34.34.34.89,0,1.24" style="fill: none; stroke: #000; stroke-linecap: round; stroke-linejoin: round; stroke-width: .353px;"/>
+          <path d="m12.172,11.252c.67.67.67,1.75,0,2.42" style="fill: none; stroke: #000; stroke-linecap: round; stroke-linejoin: round; stroke-width: .353px;"/>
+        </g>
+        <g>
+          <path d="m11.572,7.282c.34.34.34.89,0,1.23" style="fill: none; stroke: #000; stroke-linecap: round; stroke-linejoin: round; stroke-width: .353px;"/>
+          <path d="m12.172,6.692c.67.67.67,1.75,0,2.42" style="fill: none; stroke: #000; stroke-linecap: round; stroke-linejoin: round; stroke-width: .353px;"/>
+        </g>
+      </g>
+      <rect x="14.612" y="5.592" width="1.41" height="9.19" style="fill: #000; stroke-width: 0px;"/>
+    </g>
+    <circle cx="10.182" cy="10.182" r="10.01" style="fill: none; stroke: #000; stroke-linecap: round; stroke-linejoin: round; stroke-width: .344px;"/>
+  </g>
+</svg>
