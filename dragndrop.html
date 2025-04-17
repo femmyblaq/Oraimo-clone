@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Drag and Drop</title>
+</head>
+<style>
+    body {
+        width: 100vh;
+        height: 100vh;
+    }
+    #dragMe{
+        width: 100px;
+        height: 100px;
+        background-color: #3498db;
+        color: #fff;
+        text-align: center;
+        line-height: 100px;
+        margin: 20px;
+        cursor: move;
+    } 
+
+    #dropZone {
+        width: 200px;
+        height: 200px;
+        border: 2px dashed #ccc;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        color: #888;
+    }
+
+</style>
+<body>
+    <div id="dragMe" draggable="true">Drag Me</div>
+    <div id="dropZone">Drop Here</div>
+</body>
+<script>
+    const dragMe = document.querySelector("#dragMe")
+    const dropZone = document.querySelector("#dropZone")
+    const bodyZone = document.querySelector("#bodyZone")
+
+    console.log(bodyZone)
+
+    dragMe.addEventListener("dragstart", (e)=>{
+        e.dataTransfer.setData("text/plain", e.target.id);
+    })
+
+    dropZone.addEventListener("dragover", (e)=>{
+        e.preventDefault();
+    })
+    // bodyZone.addEventListener("dragover", (e)=>{
+    //     e.preventDefault();
+    // })
+    // bodyZone.addEventListener("drop", (e)=>{
+    //     e.preventDefault();
+    //     const id = e.dataTransfer.getData("text");
+    //     const draggedElement = document.getElementById(id);
+    //     bodyZone.appendChild(draggedElement)
+    //     // bodyZone.style.border = "2px solid green";
+    //     // bodyZone.style.color = "#000";
+
+    // })
+
+    dropZone.addEventListener("drop", (e)=>{
+        e.preventDefault();
+        const id = e.dataTransfer.getData("text");
+        const draggedElement = document.getElementById(id);
+        dropZone.appendChild(draggedElement)
+        dropZone.style.border = "2px solid green";
+        dropZone.style.color = "#000";
+
+    })
+
+
+</script>
+</html>

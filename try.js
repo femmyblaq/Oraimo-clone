@@ -169,3 +169,16 @@ prevScrollBtn.addEventListener("click", ()=>{
 })
 
 productGroup.addEventListener("scroll", updateBtn)
+
+
+const menuBtn = document.querySelector(".menu")
+const slideMenu = document.querySelector(".slider-menu")
+const closeMenu = document.querySelector(".ri-close-large-fill")
+
+menuBtn.addEventListener("click", ()=>{
+    slideMenu.style.right = "0"
+})
+
+closeMenu.addEventListener("click", ()=>{
+    slideMenu.style.right = "-700px"
+})

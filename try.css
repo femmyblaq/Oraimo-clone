@@ -1,3 +1,6 @@
+.slider-menu {
+    /* display: none; */
+}
 @media (min-width: 320px) and (max-width: 450px) {
     body {
         position: relative;
@@ -9,6 +12,11 @@
         position: absolute;
         top: 0;
         z-index: 11;
+        overflow: hidden;
+        right: -700px;
+        transition: right 500ms ease-in-out;
+        /* display: none; */
+        /* scroll-behavior: unset; */
     }
     .slider-menu div {
         width: 70%;
@@ -23,6 +31,20 @@
         background-color: #2a2a2a;
         width: 100%;
         padding: 15px 10px;
+    }
+    .slider-menu ul li {
+        height: 70px;
+        display: flex;
+        align-items: center;
+        padding: 0 10px;
+        font-size: 1.1rem;
+        font-weight: 600;
+        justify-content: space-between;
+        border-bottom: 2px solid #ccc;
+    }
+    .slider-menu ul li a {
+        text-decoration: none;
+        color: black;
     }
 
     header {
@@ -89,6 +111,13 @@
     #new-arrival .all-production .product-card .product-body .cart button {
         text-wrap: nowrap;
     padding: 5px 8px !important;
-
+}
+#footer {
+    height: 100% !important;
+}
+#footer .content{
+    display: grid !important;
+    grid-template-columns: 1fr !important;
+    
 }
 }
